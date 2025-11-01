@@ -29,20 +29,6 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Instructions for adding photos */}
-        <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-6 mb-8 border-2 border-primary/20 shadow-[var(--shadow-soft)]">
-          <div className="flex items-start gap-3">
-            <Camera className="text-primary flex-shrink-0 mt-1" size={24} />
-            <div>
-              <h3 className="font-elegant font-semibold text-lg mb-2">Add Your Photos:</h3>
-              <p className="text-muted-foreground">
-                Place your photos in the <code className="bg-secondary px-2 py-1 rounded text-sm">src/assets/photos</code> folder 
-                and name them photo1.jpg, photo2.jpg, etc. The gallery will automatically display them!
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Photo grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {photoSlots.map((num) => (
@@ -59,11 +45,11 @@ const Gallery = () => {
               </div>
               
               {/* Uncomment and update path when adding real photos */}
-              {/* <img 
+              <img
                 src={`/src/assets/photos/photo${num}.jpg`}
                 alt={`Memory ${num}`}
                 className="w-full h-full object-cover"
-              /> */}
+              />
             </div>
           ))}
         </div>
